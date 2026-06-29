@@ -184,20 +184,17 @@ img {
     color: var(--white); 
 }
  
+/* Fixed: Stripped out the gold background button properties to ensure total text consistency */
 .nav-links .nav-cta {
-    background: var(--gold);
-    color: var(--black);
-    padding: 0.45rem 1.1rem;
-    border-radius: var(--radius-sm);
-    font-weight: 700;
-    font-size: 0.85rem;
-    transition: background var(--transition), transform var(--transition);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--muted-light);
+    transition: color var(--transition);
 }
- 
+
 .nav-links .nav-cta:hover {
-    background: #E0BC44;
-    transform: translateY(-1px);
-    color: var(--black);
+    color: var(--white);
+    transform: none;
 }
  
 .nav-toggle {
@@ -251,7 +248,6 @@ img {
     padding: 1.5rem 2rem;
 }
  
-/* FIXED: Changed '.open' to '.active' to process script toggle events */
 .mobile-menu.active { 
     display: block; 
 }
@@ -279,10 +275,10 @@ img {
 /* ── Responsive Media Breakpoints ─────────────────────────── */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hides desktop links on mobile screen widths */
+        display: none;
     }
     .nav-toggle {
-        display: flex; /* Activates interactive mobile dropdown tap box layout */
+        display: flex;
     }
 }
  
