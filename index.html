@@ -4,9 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ME Growth Bridge | Execution + AI Systems Operator</title>
+<title>ME Growth Bridge | Execution & AI Systems Operator</title>
 
 <style>
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+:root {
+    --bg: #0e0c0a;
+    --card: rgba(23, 20, 18, 0.72);
+    --border: rgba(212, 175, 55, 0.18);
+    --gold: #d4af37;
+    --sky: #38bdf8;
+    --text: #faf9f6;
+    --muted: #a19a95;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,26 +28,38 @@
 }
 
 body {
-    background: #0e0c0a;
-    color: #faf9f6;
+    background: radial-gradient(circle at top, #15110f, var(--bg));
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     padding: 2rem;
 }
+
+/* =========================
+   LAYOUT
+========================= */
 
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* HEADER */
+/* =========================
+   GLASS HEADER
+========================= */
+
 header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(14px);
+    background: rgba(14, 12, 10, 0.65);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
     margin-bottom: 3rem;
-    border-bottom: 1px solid #292420;
-    padding-bottom: 1.5rem;
+    z-index: 10;
 }
 
 .brand {
@@ -43,238 +69,278 @@ header {
 }
 
 .brand img {
-    height: 84px;
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
+    height: 76px;
+    width: auto;
 }
 
 .brand-title {
     font-weight: 700;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.4px;
 }
 
 .brand-sub {
     font-size: 0.75rem;
-    color: #a19a95;
+    color: var(--muted);
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero h1 {
     font-size: 2.4rem;
     line-height: 1.2;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
-    color: #a19a95;
+    color: var(--muted);
     font-size: 1.05rem;
     max-width: 750px;
 }
 
-/* PROOF STRIP */
-.proof {
-    margin-top: 3rem;
+/* =========================
+   BADGES
+========================= */
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.badge {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* =========================
+   PROOF GRID
+========================= */
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
+    margin-bottom: 3rem;
 }
 
 .card {
-    background: #171412;
-    border: 1px solid #292420;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
     padding: 1.2rem;
-    border-radius: 8px;
+    transition: transform 0.25s ease, border 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.35);
 }
 
 .card h3 {
-    color: #38bdf8;
-    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.card p {
-    color: #a19a95;
-    font-size: 0.9rem;
-}
+.gold { color: var(--gold); }
+.sky { color: var(--sky); }
+.muted { color: var(--muted); }
 
-/* CAPABILITY */
-.section-title {
-    margin-top: 3rem;
-    font-size: 1.2rem;
-    color: #d4af37;
-}
+/* =========================
+   VIDEO PROOF MODULE
+========================= */
 
-.split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.block {
-    background: #171412;
-    border: 1px solid #292420;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.block ul {
-    margin-top: 0.8rem;
-    color: #a19a95;
-    font-size: 0.95rem;
-    line-height: 1.8;
-}
-
-/* MEDIA */
-.media {
-    margin-top: 3rem;
-    padding: 1.5rem;
-    border: 1px dashed #d4af37;
-    background: #221c18;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.media a {
-    color: #d4af37;
-    font-weight: 700;
+.video-card {
+    display: block;
     text-decoration: none;
+    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,255,255,0.03));
+    border: 1px solid rgba(212,175,55,0.25);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
-/* CONTACT */
+.video-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.5);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
 form {
-    margin-top: 3rem;
-    background: #171412;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.08);
     padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #292420;
+    border-radius: 12px;
 }
 
 input, textarea {
     width: 100%;
     padding: 0.8rem;
+    margin-top: 0.4rem;
     margin-bottom: 1rem;
-    background: #0e0c0a;
-    border: 1px solid #292420;
-    color: white;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text);
     border-radius: 6px;
 }
 
 button {
-    width: 100%;
-    padding: 0.9rem;
-    background: #d4af37;
+    background: var(--gold);
+    color: black;
     border: none;
+    padding: 0.9rem 1.2rem;
     font-weight: 700;
+    width: 100%;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #e8c547;
+    background: #e6c14a;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
-    .split { grid-template-columns: 1fr; }
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    body { padding: 1.2rem; }
     .hero h1 { font-size: 1.8rem; }
+    .brand img { height: 58px; }
 }
 </style>
 </head>
 
 <body>
-<div class="container">
+
+<div class="container fade-in">
 
 <!-- HEADER -->
 <header>
     <div class="brand">
-        <img src="logo.png" alt="logo">
-        <div class="brand-text">
-            <div class="brand-title">ME GROWTH BRIDGE</div>
-            <div class="brand-sub">Execution · Systems · AI</div>
+        <img src="logo.png" alt="ME Growth Bridge Logo">
+        <div>
+            <div class="brand-title">ME GROWTH BRIDGE.</div>
+            <div class="brand-sub">Execution & AI Systems Operator</div>
         </div>
     </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Multilingual execution operator building enterprise-grade sales, onboarding, and AI systems.</h1>
+    <h1>
+        Multilingual Execution Operator<br>
+        Building AI-Driven Commercial Systems
+    </h1>
+
     <p>
-        Cross-border experience across APAC, EU, and UK markets. Combining enterprise operations, startup execution, and AI-driven workflow design.
+        Bridging enterprise operations and startup execution systems across APAC, EU, and UK markets through sales, onboarding architecture, and AI-enabled workflows.
     </p>
 </section>
 
-<!-- PROOF STRIP -->
-<section class="proof">
+<!-- BADGES -->
+<div class="badges">
+    <div class="badge">Enterprise + Startup Operator</div>
+    <div class="badge">Multilingual (EN / CN / KR / JP)</div>
+    <div class="badge">Sales & Onboarding Systems</div>
+    <div class="badge">AI Workflow Builder</div>
+</div>
+
+<!-- PROOF GRID -->
+<section class="grid">
 
     <div class="card">
-        <h3>Enterprise Operations</h3>
-        <p>:contentReference[oaicite:0]{index=0} — Groups & Meetings Sales Support (EU & UK&I). RFP handling, stakeholder coordination, cross-regional execution.</p>
+        <h3 class="gold">Enterprise Operations</h3>
+        <p class="muted">
+            Groups & Meetings Sales Support —
+            <strong>:contentReference[oaicite:0]{index=0}</strong><br>
+            RFP handling, stakeholder coordination, cross-regional execution (EU & UK&I).
+        </p>
     </div>
 
     <div class="card">
-        <h3>Top Sales Performance</h3>
-        <p>Independent Contractor (Dashdot) — consistently top-ranked sales performer, exceeding targets and driving high-volume engagement cycles.</p>
+        <h3 class="gold">High-Performance Sales</h3>
+        <p class="muted">
+            Top-ranked independent contractor at Dashdot.<br>
+            Consistent over-target performance and client acquisition execution.
+        </p>
     </div>
 
     <div class="card">
-        <h3>Onboarding Systems</h3>
-        <p>Merchant onboarding coordinator — SaaS/POS workflows, end-to-end implementation from sale closure to go-live.</p>
+        <h3 class="gold">Onboarding Systems</h3>
+        <p class="muted">
+            Merchant onboarding coordinator for POS systems.<br>
+            End-to-end implementation from sales closure to go-live.
+        </p>
     </div>
 
     <div class="card">
-        <h3>AI Production Work</h3>
-        <p>AI-native media systems + generative production workflows (see featured video below).</p>
+        <h3 class="gold">AI Production Work</h3>
+        <p class="muted">
+            Generative media systems and AI-assisted creative production.
+        </p>
     </div>
 
 </section>
 
-<!-- CAPABILITY -->
-<h2 class="section-title">Execution Capability</h2>
-
-<section class="split">
-
-    <div class="block">
-        <strong>Enterprise & Commercial Systems</strong>
-        <ul>
-            <li>RFP & group sales workflows</li>
-            <li>Stakeholder + client coordination</li>
-            <li>Cross-border communication (EU / UK / APAC)</li>
-        </ul>
-    </div>
-
-    <div class="block">
-        <strong>Startup & Operational Systems</strong>
-        <ul>
-            <li>SaaS onboarding & merchant integration</li>
-            <li>Workflow automation design</li>
-            <li>AI-assisted content + ops pipelines</li>
-        </ul>
-    </div>
-
-</section>
-
-<!-- MEDIA PROOF -->
-<section class="media">
-    <div style="margin-bottom: 0.5rem;">Selected AI Production Work</div>
-    <a href="https://youtu.be" target="_blank">▶ View AI Media Project (Multimedia Execution Sample)</a>
-</section>
+<!-- VIDEO PROOF -->
+<a class="video-card" href="https://youtu.be" target="_blank">
+    <h2 class="sky">AI Production Showcase</h2>
+    <p class="muted">
+        Click to view AI-generated multimedia project demonstrating applied generative systems in creative execution.
+    </p>
+</a>
 
 <!-- CONTACT -->
-<form action="https://formspree.io/f/mqevlled" method="POST">
+<section>
+    <h2 class="gold">Contact</h2>
 
-    <h2 style="margin-bottom: 1rem; color:#d4af37;">Contact / Collaboration</h2>
+    <form action="https://formspree.io/f/mqevlled" method="POST">
+        <label>Name</label>
+        <input name="name" required>
 
-    <input type="text" name="name" placeholder="Name / Company" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Brief description of opportunity..." required></textarea>
+        <label>Email</label>
+        <input name="email" type="email" required>
 
-    <button type="submit">SEND MESSAGE</button>
-</form>
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Send Inquiry</button>
+    </form>
+</section>
 
 </div>
+
+<script>
+document.querySelectorAll("a[href]").forEach(a => {
+    a.addEventListener("click", () => {
+        a.style.opacity = "0.8";
+    });
+});
+</script>
+
 </body>
 </html>
