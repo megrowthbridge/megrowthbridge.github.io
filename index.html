@@ -1,346 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ME Growth Bridge | Execution & AI Systems Operator</title>
-
-<style>
-/* =========================
-   DESIGN SYSTEM
-========================= */
-
-:root {
-    --bg: #0e0c0a;
-    --card: rgba(23, 20, 18, 0.72);
-    --border: rgba(212, 175, 55, 0.18);
-    --gold: #d4af37;
-    --sky: #38bdf8;
-    --text: #faf9f6;
-    --muted: #a19a95;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: radial-gradient(circle at top, #15110f, var(--bg));
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    padding: 2rem;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* =========================
-   GLASS HEADER
-========================= */
-
-header {
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(14px);
-    background: rgba(14, 12, 10, 0.65);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    margin-bottom: 3rem;
-    z-index: 10;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.brand img {
-    height: 76px;
-    width: auto;
-}
-
-.brand-title {
-    font-weight: 700;
-    letter-spacing: -0.4px;
-}
-
-.brand-sub {
-    font-size: 0.75rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    color: var(--muted);
-    font-size: 1.05rem;
-    max-width: 750px;
-}
-
-/* =========================
-   BADGES
-========================= */
-
-.badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 2rem 0 3rem;
-}
-
-.badge {
-    padding: 0.35rem 0.7rem;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 999px;
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-/* =========================
-   PROOF GRID
-========================= */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 1.2rem;
-    transition: transform 0.25s ease, border 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(212, 175, 55, 0.35);
-}
-
-.card h3 {
-    margin-bottom: 0.5rem;
-}
-
-.gold { color: var(--gold); }
-.sky { color: var(--sky); }
-.muted { color: var(--muted); }
-
-/* =========================
-   VIDEO PROOF MODULE
-========================= */
-
-.video-card {
-    display: block;
-    text-decoration: none;
-    background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,255,255,0.03));
-    border: 1px solid rgba(212,175,55,0.25);
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 3rem;
-    transition: transform 0.3s ease, border 0.3s ease;
-}
-
-.video-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(212,175,55,0.5);
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-form {
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 2rem;
-    border-radius: 12px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: var(--text);
-    border-radius: 6px;
-}
-
-button {
-    background: var(--gold);
-    color: black;
-    border: none;
-    padding: 0.9rem 1.2rem;
-    font-weight: 700;
-    width: 100%;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #e6c14a;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-.fade-in {
-    animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-    body { padding: 1.2rem; }
-    .hero h1 { font-size: 1.8rem; }
-    .brand img { height: 58px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME Growth Bridge | Enterprise Execution. AI-Native Delivery.</title>
+    <meta name="description" content="Top-ranked commercial performer delivering multilingual B2B growth, SaaS onboarding, and AI-enhanced execution across APAC, AU, EU and UK.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<div class="container fade-in">
-
-<!-- HEADER -->
-<header>
-    <div class="brand">
-        <img src="logo.png" alt="ME Growth Bridge Logo">
-        <div>
-            <div class="brand-title">ME GROWTH BRIDGE.</div>
-            <div class="brand-sub">Execution & AI Systems Operator</div>
+ 
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-brand">
+                <span class="nav-logo">MGB</span>
+                <span class="nav-name">ME Growth Bridge<span class="gold-dot">.</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#execution">Execution</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
+ 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#execution">Execution</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>
-        Multilingual Execution Operator<br>
-        Building AI-Driven Commercial Systems
-    </h1>
-
-    <p>
-        Bridging enterprise operations and startup execution systems across APAC, EU, and UK markets through sales, onboarding architecture, and AI-enabled workflows.
-    </p>
-</section>
-
-<!-- BADGES -->
-<div class="badges">
-    <div class="badge">Enterprise + Startup Operator</div>
-    <div class="badge">Multilingual (EN / CN / KR / JP)</div>
-    <div class="badge">Sales & Onboarding Systems</div>
-    <div class="badge">AI Workflow Builder</div>
-</div>
-
-<!-- PROOF GRID -->
-<section class="grid">
-
-    <div class="card">
-        <h3 class="gold">Enterprise Operations</h3>
-        <p class="muted">
-            Groups & Meetings Sales Support —
-            <strong>:contentReference[oaicite:0]{index=0}</strong><br>
-            RFP handling, stakeholder coordination, cross-regional execution (EU & UK&I).
-        </p>
-    </div>
-
-    <div class="card">
-        <h3 class="gold">High-Performance Sales</h3>
-        <p class="muted">
-            Top-ranked independent contractor at Dashdot.<br>
-            Consistent over-target performance and client acquisition execution.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3 class="gold">Onboarding Systems</h3>
-        <p class="muted">
-            Merchant onboarding coordinator for POS systems.<br>
-            End-to-end implementation from sales closure to go-live.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3 class="gold">AI Production Work</h3>
-        <p class="muted">
-            Generative media systems and AI-assisted creative production.
-        </p>
-    </div>
-
-</section>
-
-<!-- VIDEO PROOF -->
-<a class="video-card" href="https://youtu.be" target="_blank">
-    <h2 class="sky">AI Production Showcase</h2>
-    <p class="muted">
-        Click to view AI-generated multimedia project demonstrating applied generative systems in creative execution.
-    </p>
-</a>
-
-<!-- CONTACT -->
-<section>
-    <h2 class="gold">Contact</h2>
-
-    <form action="https://formspree.io/f/mqevlled" method="POST">
-        <label>Name</label>
-        <input name="name" required>
-
-        <label>Email</label>
-        <input name="email" type="email" required>
-
-        <label>Message</label>
-        <textarea name="message" required></textarea>
-
-        <button type="submit">Send Inquiry</button>
-    </form>
-</section>
-
-</div>
-
-<script>
-document.querySelectorAll("a[href]").forEach(a => {
-    a.addEventListener("click", () => {
-        a.style.opacity = "0.8";
-    });
-});
-</script>
-
+ 
+    <main id="top">
+ 
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-eyebrow">Strategic Contractor Practice</div>
+                <h1 class="hero-headline">
+                    <span class="line-gold">Enterprise Execution.</span>
+                    <span class="line-sky">Startup Agility.</span>
+                    <span class="line-white">AI-Native Delivery.</span>
+                </h1>
+                <p class="hero-sub">
+                    Delivering commercial growth, multilingual operations, and AI-enhanced execution across APAC, AU, EU &amp; UK.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn-primary">View Selected Work</a>
+                    <a href="#contact" class="btn-ghost">Contact</a>
+                </div>
+                <div class="hero-langs">
+                    <span class="lang-tag">English</span>
+                    <span class="lang-tag">普通话</span>
+                    <span class="lang-tag">한국어</span>
+                    <span class="lang-tag">日本語</span>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Credibility Strip -->
+        <section class="credibility">
+            <div class="container">
+                <div class="cred-grid">
+                    <div class="cred-card">
+                        <div class="cred-icon">◆</div>
+                        <div class="cred-label">Top Commercial Performer</div>
+                    </div>
+                    <div class="cred-card">
+                        <div class="cred-icon">◆</div>
+                        <div class="cred-label">APAC · AU · EU · UK</div>
+                    </div>
+                    <div class="cred-card">
+                        <div class="cred-icon">◆</div>
+                        <div class="cred-label">AI Workflow Builder</div>
+                    </div>
+                    <div class="cred-card">
+                        <div class="cred-icon">◆</div>
+                        <div class="cred-label">Enterprise + Startup</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Featured Project -->
+        <section class="featured" id="work">
+            <div class="container">
+                <div class="section-eyebrow">Featured Project</div>
+                <h2 class="section-title">Dashdot Brand Anthem <span class="ampersand">&amp;</span> Cyberpunk MV</h2>
+ 
+                <a href="https://youtu.be/fD0xMgvViqg" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="https://img.youtube.com/vi/fD0xMgvViqg/maxresdefault.jpg" 
+                             alt="Dashdot Brand Anthem - AI Generated Music Video"
+                             onerror="this.style.display='none'; this.parentElement.classList.add('thumbnail-fallback')">
+                        <div class="play-button">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="overlay-label">Watch on YouTube</span>
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-tags">
+                            <span class="tag">AI Generation</span>
+                            <span class="tag">Prompt Engineering</span>
+                            <span class="tag">Creative Direction</span>
+                            <span class="tag">3D Animation</span>
+                            <span class="tag">Original Lyrics</span>
+                        </div>
+                        <p class="project-desc">
+                            Responsible for concept, original lyrics, prompt engineering, AI media generation, creative direction, editing and final production. Animated team members rendered as 3D AI figures across a cyberpunk visual narrative — produced entirely as a value-add initiative beyond the core commercial role.
+                        </p>
+                        <div class="project-link-label">
+                            Open project
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+ 
+        <!-- Selected Execution -->
+        <section class="execution" id="execution">
+            <div class="container">
+                <div class="section-eyebrow">Selected Execution</div>
+                <h2 class="section-title">Across Every Discipline</h2>
+                <div class="exec-grid">
+ 
+                    <div class="exec-card">
+                        <div class="exec-header">
+                            <span class="exec-icon gold">▲</span>
+                            <h3>Commercial Growth</h3>
+                        </div>
+                        <ul class="exec-list">
+                            <li>Top-ranked sales performer</li>
+                            <li>Consistent KPI achievement</li>
+                            <li>Internal competition wins</li>
+                            <li>Partner pipeline growth</li>
+                        </ul>
+                    </div>
+ 
+                    <div class="exec-card">
+                        <div class="exec-header">
+                            <span class="exec-icon sky">▲</span>
+                            <h3>Enterprise Operations</h3>
+                        </div>
+                        <ul class="exec-list">
+                            <li>Groups &amp; Meetings management</li>
+                            <li>Cross-border RFP execution</li>
+                            <li>Stakeholder coordination</li>
+                            <li>EU &amp; UK&amp;I coverage</li>
+                        </ul>
+                    </div>
+ 
+                    <div class="exec-card">
+                        <div class="exec-header">
+                            <span class="exec-icon gold">▲</span>
+                            <h3>Workflow Systems</h3>
+                        </div>
+                        <ul class="exec-list">
+                            <li>Merchant onboarding</li>
+                            <li>Restaurant POS deployment</li>
+                            <li>Portfolio ownership</li>
+                            <li>Go-live execution</li>
+                        </ul>
+                    </div>
+ 
+                    <div class="exec-card">
+                        <div class="exec-header">
+                            <span class="exec-icon sky">▲</span>
+                            <h3>AI &amp; Automation</h3>
+                        </div>
+                        <ul class="exec-list">
+                            <li>Prompt engineering</li>
+                            <li>AI content production</li>
+                            <li>Workflow automation</li>
+                            <li>Process optimisation</li>
+                        </ul>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Current Focus -->
+        <section class="focus" id="focus">
+            <div class="container">
+                <div class="section-eyebrow">Current Focus</div>
+                <h2 class="section-title">Expanding Capability</h2>
+                <div class="focus-grid">
+                    <div class="focus-item">
+                        <div class="focus-bar"></div>
+                        <span>AI Applications</span>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-bar"></div>
+                        <span>Workflow Automation</span>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-bar"></div>
+                        <span>Operational Analytics</span>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-bar"></div>
+                        <span>Enterprise AI Systems</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Philosophy -->
+        <section class="philosophy">
+            <div class="container">
+                <div class="philosophy-inner">
+                    <div class="section-eyebrow">Philosophy</div>
+                    <blockquote class="philosophy-text">
+                        Execution is the only metric that matters. Strategy without delivery is a document — and I build things that ship, scale, and perform. AI is not a tool I use occasionally; it is woven into how I research, create, communicate, and operate. The result is output that outpaces what a single role is supposed to deliver.
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-eyebrow">Get in Touch</div>
+                <h2 class="section-title">Initiate a Project Briefing</h2>
+                <p class="contact-sub">Let's map out growth targets, language coverage requirements, or operational bottlenecks.</p>
+ 
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqevlled" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name / Principal Stakeholder</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name or role">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Contact Email</label>
+                            <input type="email" id="email" name="email" required placeholder="name@company.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Organisation</label>
+                        <input type="text" id="company" name="company" placeholder="Company or project name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Briefing</label>
+                        <textarea id="message" name="message" required placeholder="Describe your engagement scope, target markets, or growth challenge..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="btn-text">Send Project Briefing</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        Briefing received. You will hear back within 24–48 hours.
+                    </div>
+                    <div class="form-error" id="formError">
+                        Something went wrong. Please try again or reach out directly.
+                    </div>
+                </form>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="nav-logo small">MGB</span>
+                    <span class="footer-name">ME Growth Bridge<span class="gold-dot">.</span></span>
+                </div>
+                <p class="footer-note">
+                    This portfolio demonstrates modern web development and AI-assisted creative production — and is continuously updated as new capabilities are deployed.
+                </p>
+                <p class="footer-copy">© 2026 · APAC · AU · EU · UK · Remote-First</p>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="script.js"></script>
 </body>
 </html>
