@@ -4,77 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ME Growth Bridge | AI-Native Growth & Systems Consultancy</title>
+<title>ME Growth Bridge | Execution + AI Systems Operator</title>
 
 <style>
-/* ========== BASE ========== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    background: #0b0a08;
-    color: #f5f3ee;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0e0c0a;
+    color: #faf9f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* ========== SUBTLE BACKGROUND GLOW ========== */
-body::before {
-    content: "";
-    position: fixed;
-    top: -200px;
-    left: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 60%);
-    z-index: 0;
-    animation: floatGlow 12s ease-in-out infinite alternate;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    bottom: -200px;
-    right: -200px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(56,189,248,0.10), transparent 60%);
-    z-index: 0;
-    animation: floatGlow 14s ease-in-out infinite alternate;
-}
-
-@keyframes floatGlow {
-    from { transform: translateY(0px); }
-    to { transform: translateY(30px); }
-}
-
-/* ========== LAYOUT ========== */
-.container {
-    position: relative;
-    z-index: 1;
-    max-width: 980px;
-    margin: auto;
     padding: 2rem;
 }
 
-/* ========== HEADER ========== */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    backdrop-filter: blur(14px);
-    background: rgba(11,10,8,0.6);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 1rem 0;
-    margin-bottom: 3rem;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
+/* HEADER */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #292420;
+    padding-bottom: 1.5rem;
 }
 
 .brand {
@@ -84,12 +43,7 @@ header {
 }
 
 .brand img {
-    height: 72px;
-    transition: transform 0.3s ease;
-}
-
-.brand img:hover {
-    transform: scale(1.05);
+    height: 84px;
 }
 
 .brand-text {
@@ -99,133 +53,115 @@ header {
 
 .brand-title {
     font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.brand-title span {
-    color: #d4af37;
+    letter-spacing: -0.3px;
 }
 
 .brand-sub {
     font-size: 0.75rem;
-    color: #9a948c;
+    color: #a19a95;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-nav {
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: #b9b2a8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-nav a:hover {
-    color: #d4af37;
-}
-
-/* ========== HERO ========== */
-.hero {
-    margin-bottom: 4rem;
-    animation: fadeUp 1s ease forwards;
-}
-
+/* HERO */
 .hero h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
 }
 
 .hero p {
-    color: #b0a89f;
-    max-width: 700px;
-    font-size: 1.1rem;
+    color: #a19a95;
+    font-size: 1.05rem;
+    max-width: 750px;
 }
 
-.gold { color: #d4af37; }
-.blue { color: #38bdf8; }
-
-/* ========== SECTIONS ========== */
-section {
-    margin-bottom: 4rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
-}
-
-section:nth-child(n) {
-    animation-delay: 0.1s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========== GRID ========== */
-.grid {
+/* PROOF STRIP */
+.proof {
+    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }
 
 .card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
+    background: #171412;
+    border: 1px solid #292420;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #38bdf8;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #a19a95;
+    font-size: 0.9rem;
+}
+
+/* CAPABILITY */
+.section-title {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: #d4af37;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.block {
+    background: #171412;
+    border: 1px solid #292420;
     padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease, border 0.3s ease;
+    border-radius: 8px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(212,175,55,0.4);
+.block ul {
+    margin-top: 0.8rem;
+    color: #a19a95;
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
-/* ========== TAGS ========== */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+/* MEDIA */
+.media {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border: 1px dashed #d4af37;
+    background: #221c18;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.tag {
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.85rem;
-    color: #cfc7bb;
+.media a {
+    color: #d4af37;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-/* ========== FORM ========== */
+/* CONTACT */
 form {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
+    margin-top: 3rem;
+    background: #171412;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 8px;
+    border: 1px solid #292420;
 }
 
 input, textarea {
     width: 100%;
-    padding: 0.9rem;
-    margin-top: 0.4rem;
+    padding: 0.8rem;
     margin-bottom: 1rem;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: #0f0e0c;
+    background: #0e0c0a;
+    border: 1px solid #292420;
     color: white;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #d4af37;
+    border-radius: 6px;
 }
 
 button {
@@ -233,36 +169,23 @@ button {
     padding: 0.9rem;
     background: #d4af37;
     border: none;
-    border-radius: 6px;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
+    background: #e8c547;
 }
 
-/* ========== FOOTER ========== */
-footer {
-    text-align: center;
-    color: #8f887f;
-    font-size: 0.85rem;
-    padding: 3rem 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-/* ========== MOBILE ========== */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 2rem; }
-    nav { display: none; }
-    .brand img { height: 56px; }
+/* MOBILE */
+@media (max-width: 700px) {
+    .split { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <!-- HEADER -->
@@ -270,87 +193,88 @@ footer {
     <div class="brand">
         <img src="logo.png" alt="logo">
         <div class="brand-text">
-            <div class="brand-title">ME GROWTH <span>BRIDGE</span></div>
-            <div class="brand-sub">AI-Native Systems Consultancy</div>
+            <div class="brand-title">ME GROWTH BRIDGE</div>
+            <div class="brand-sub">Execution · Systems · AI</div>
         </div>
     </div>
-
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#stack">AI Stack</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>
-        <span class="gold">AI Systems.</span><br>
-        <span class="blue">Global Execution.</span><br>
-        High-Performance Growth Infrastructure.
-    </h1>
-
+    <h1>Multilingual execution operator building enterprise-grade sales, onboarding, and AI systems.</h1>
     <p>
-        Building multilingual, AI-powered commercial systems across APAC, EU, UK, US and AU markets.
-        Focused on automation, scale, and enterprise-grade execution layers.
+        Cross-border experience across APAC, EU, and UK markets. Combining enterprise operations, startup execution, and AI-driven workflow design.
     </p>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-    <h2 class="gold">Operational Architecture</h2>
-    <div class="grid">
-        <div class="card">Cross-Cultural Market Expansion</div>
-        <div class="card">SaaS Onboarding Systems</div>
-        <div class="card">AI Workflow Automation</div>
+<!-- PROOF STRIP -->
+<section class="proof">
+
+    <div class="card">
+        <h3>Enterprise Operations</h3>
+        <p>:contentReference[oaicite:0]{index=0} — Groups & Meetings Sales Support (EU & UK&I). RFP handling, stakeholder coordination, cross-regional execution.</p>
     </div>
+
+    <div class="card">
+        <h3>Top Sales Performance</h3>
+        <p>Independent Contractor (Dashdot) — consistently top-ranked sales performer, exceeding targets and driving high-volume engagement cycles.</p>
+    </div>
+
+    <div class="card">
+        <h3>Onboarding Systems</h3>
+        <p>Merchant onboarding coordinator — SaaS/POS workflows, end-to-end implementation from sale closure to go-live.</p>
+    </div>
+
+    <div class="card">
+        <h3>AI Production Work</h3>
+        <p>AI-native media systems + generative production workflows (see featured video below).</p>
+    </div>
+
 </section>
 
-<!-- AI STACK -->
-<section id="stack">
-    <h2 class="gold">AI System Deployment Matrix</h2>
-    <div class="card">
-        <p style="margin-bottom:1rem;">
-            Enterprise-grade automation and generative AI systems:
-        </p>
+<!-- CAPABILITY -->
+<h2 class="section-title">Execution Capability</h2>
 
-        <div class="tags">
-            <div class="tag">Content Generation Systems</div>
-            <div class="tag">Prompt Architecture</div>
-            <div class="tag">Workflow Automation</div>
-            <div class="tag">Localization Engines</div>
-            <div class="tag">Analytics Pipelines</div>
-        </div>
+<section class="split">
+
+    <div class="block">
+        <strong>Enterprise & Commercial Systems</strong>
+        <ul>
+            <li>RFP & group sales workflows</li>
+            <li>Stakeholder + client coordination</li>
+            <li>Cross-border communication (EU / UK / APAC)</li>
+        </ul>
     </div>
+
+    <div class="block">
+        <strong>Startup & Operational Systems</strong>
+        <ul>
+            <li>SaaS onboarding & merchant integration</li>
+            <li>Workflow automation design</li>
+            <li>AI-assisted content + ops pipelines</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- MEDIA PROOF -->
+<section class="media">
+    <div style="margin-bottom: 0.5rem;">Selected AI Production Work</div>
+    <a href="https://youtu.be" target="_blank">▶ View AI Media Project (Multimedia Execution Sample)</a>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2 class="gold">Initiate Project Briefing</h2>
+<form action="https://formspree.io/f/mqevlled" method="POST">
 
-    <form action="https://formspree.io/f/mqevlled" method="POST">
-        <label>Name</label>
-        <input type="text" name="name" required>
+    <h2 style="margin-bottom: 1rem; color:#d4af37;">Contact / Collaboration</h2>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+    <input type="text" name="name" placeholder="Name / Company" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Brief description of opportunity..." required></textarea>
 
-        <label>Company</label>
-        <input type="text" name="company">
-
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Briefing →</button>
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 ME Growth Bridge · APAC · EU · UK · US · AU
-</footer>
+    <button type="submit">SEND MESSAGE</button>
+</form>
 
 </div>
-
 </body>
 </html>
