@@ -663,9 +663,9 @@ img {
 .contact-sub {
     color: var(--muted-light);
     font-size: 1rem;
-    margin-bottom: 2.5rem;
-    margin-top: -1.5rem;
+    margin: -1.5rem auto 1rem;
     max-width: 520px;
+    text-align: center;
 }
 
 .contact-note {
