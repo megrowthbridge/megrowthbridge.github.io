@@ -123,47 +123,66 @@ img {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0.625rem;
+    gap: 0.9rem;
+    text-decoration: none;
+    outline: none;
 }
  
 .nav-logo {
-    background: var(--gold);
-    color: var(--black);
-    font-family: var(--font-body);
-    font-weight: 800;
-    font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
-    border-radius: var(--radius-sm);
-    letter-spacing: 0.03em;
+    display: block;
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
- 
-.nav-logo.small {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.4rem;
+
+.nav-brand:hover .nav-logo {
+    transform: scale(1.04);
+    opacity: 0.95;
 }
- 
+
 .nav-name {
+    font-family: var(--font-body);
     font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: -0.01em;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    transition: color 0.25s ease;
 }
- 
-.gold-dot { color: var(--gold); }
+
+.nav-brand:hover .nav-name {
+    color: var(--gold);
+}
+
+.gold-dot {
+    color: var(--gold);
+}
+
+.nav-brand.small .nav-logo {
+    height: 38px;
+}
  
 .nav-links {
     display: flex;
     align-items: center;
     gap: 2rem;
+    list-style: none;
 }
  
 .nav-links a {
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--muted-light);
+    text-decoration: none;
     transition: color var(--transition);
 }
  
-.nav-links a:hover { color: var(--white); }
+.nav-links a:hover { 
+    color: var(--white); 
+}
  
 .nav-links .nav-cta {
     background: var(--gold);
@@ -184,11 +203,15 @@ img {
 .nav-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
+    width: 30px;
+    height: 30px;
+    z-index: 110;
 }
  
 .nav-toggle span {
@@ -197,10 +220,23 @@ img {
     height: 2px;
     background: var(--white);
     border-radius: 2px;
-    transition: var(--transition);
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Morphing Burger Icon Animations for Mobile State Checks */
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
  
-/* Mobile Menu */
+/* ── Mobile Menu Dropdown Overlay ─────────────────────────── */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -215,21 +251,40 @@ img {
     padding: 1.5rem 2rem;
 }
  
-.mobile-menu.open { display: block; }
+/* FIXED: Changed '.open' to '.active' to process script toggle events */
+.mobile-menu.active { 
+    display: block; 
+}
  
 .mobile-menu ul {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    list-style: none;
 }
  
 .mobile-menu a {
+    display: block;
     font-size: 1rem;
     font-weight: 500;
     color: var(--muted-light);
+    text-decoration: none;
+    transition: color var(--transition);
 }
  
-.mobile-menu a:hover { color: var(--white); }
+.mobile-menu a:hover { 
+    color: var(--white); 
+}
+
+/* ── Responsive Media Breakpoints ─────────────────────────── */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hides desktop links on mobile screen widths */
+    }
+    .nav-toggle {
+        display: flex; /* Activates interactive mobile dropdown tap box layout */
+    }
+}
  
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
