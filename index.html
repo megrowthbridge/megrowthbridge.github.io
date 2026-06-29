@@ -22,11 +22,46 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        
+        /* TEMPORARY TEXT-LOGO BRAND HEADER */
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #292420;
             padding-bottom: 2rem;
             margin-bottom: 3rem;
         }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-icon {
+            background-color: #d4af37;
+            color: #0e0c0a;
+            font-weight: 900;
+            font-size: 1.1rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            letter-spacing: -0.5px;
+        }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #d4af37;
+        }
+        .brand-sub {
+            font-size: 0.75rem;
+            color: #a19a95;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
+        }
+
         h1 {
             font-size: 2.5rem;
             line-height: 1.2;
@@ -46,21 +81,22 @@
             border-radius: 8px;
             margin-bottom: 3rem;
         }
-        .video-link-card {
-            text-decoration: none; 
-            display: block; 
-            text-align: center; 
-            padding: 3.5rem 2rem; 
-            background: #221c18; 
-            border: 1px dashed #d4af37; 
-            border-radius: 6px; 
-            transition: all 0.3s ease;
-            margin-top: 1rem;
+        
+        /* RESPONSIVE VIDEO PREVIEW CONTAINER */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+            margin-top: 1.25rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.5);
         }
-        .video-link-card:hover {
-            background: #2b231e;
-            transform: translateY(-2px);
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -131,9 +167,15 @@
 
     <div class="container">
         
+        <!-- HEADER WITH TEMPORARY EMBEDDED LOGO -->
         <header>
-            <h2 class="gold">ME GROWTH BRIDGE</h2>
-            <div style="font-size: 0.8rem; color: #a19a95; letter-spacing: 1px;">M.E. STRATEGIC CONTRACTOR PRACTICE</div>
+            <div>
+                <div class="brand-logo">
+                    <div class="logo-icon">MGB</div>
+                    <div class="logo-text">ME GROWTH BRIDGE<span>.</span></div>
+                </div>
+                <div class="brand-sub">M.E. Strategic Contractor Practice</div>
+            </div>
         </header>
 
         <section>
@@ -145,16 +187,14 @@
             <p>Deploying ten years of high-performance B2B partnership expansion and complex SaaS merchant onboarding lifecycles across the APAC, EU, and UK business corridors.</p>
         </section>
 
-        <!-- CLAUDE'S FIX: PREMIUM CLICKABLE TEASER CARD TO BYPASS EMEDDING LOCKS -->
+        <!-- VIDEO BOX FEATURING THE EMBEDDED PLAYER PREVIEW AGAIN -->
         <section class="video-box">
             <h2 class="gold" style="font-size: 1.3rem;">Signature Production</h2>
-            <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Dashdot Brand Anthem & Cyberpunk MV — Authored promotional lyrics and engineered custom-rendered 3D AI animated figures to unify workspace morale.</p>
+            <p style="font-size: 0.95rem; margin-bottom: 1rem;">Dashdot Brand Anthem & Cyberpunk MV — Authored promotional lyrics and engineered custom-rendered 3D AI animated figures to unify workspace morale.</p>
             
-            <a href="https://youtu.be" target="_blank" class="video-link-card">
-                <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🎬</span>
-                <span style="color: #d4af37; font-weight: 700; font-size: 1.1rem; display: block; letter-spacing: 0.5px;">LAUNCH CYBERPUNK MUSIC VIDEO</span>
-                <span style="color: #a19a95; font-size: 0.85rem; display: block; margin-top: 0.25rem;">Opens safely in a secure streaming tab on YouTube</span>
-            </a>
+            <div class="video-container">
+                <iframe src="https://youtube.com" allowfullscreen></iframe>
+            </div>
         </section>
 
         <h2 style="margin-bottom: 1rem; font-size: 1.3rem;" class="gold">Operational Languages</h2>
@@ -181,7 +221,6 @@
             </div>
         </section>
 
-        <!-- STREAMLINED FULL-WIDTH TECH ENGINE CARD (ACADEMICS REMOVED CLEANLY) -->
         <section class="card" style="margin-bottom: 3rem;">
             <h3 class="sky" style="margin-bottom: 0.75rem; font-size: 1.2rem;">AI System Deployment Matrix</h3>
             <p style="font-size: 0.95rem; margin-bottom: 1rem; color: #faf9f6;">Actively scaling and optimizing enterprise workflows utilizing modern large language models and multi-media synthesis tools:</p>
@@ -209,18 +248,3 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Scope of Engagement</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Outline target timelines, system criteria, or market parameters..."></textarea>
-                    </div>
-                    <button type="submit">Send Proposal Brief</button>
-                </form>
-            </div>
-        </section>
-
-        <footer>
-            © 2026 ME Growth Bridge. Corporate Contractor Practice. All rights reserved.
-        </footer>
-
-    </div>
-
-</body>
-</html>
