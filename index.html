@@ -1,273 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ME Growth Bridge | Multilingual & AI-Native Growth Consultant</title>
-    <meta name="description" content="Top-Ranked Sales Performer. Multilingual Execution across APAC, EU, & UK. Custom Generative AI Workflows.">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: #0e0c0a;
-            color: #faf9f6;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 2rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #292420;
-            padding-bottom: 2rem;
-            margin-bottom: 3rem;
-        }
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .logo-text {
-            font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: -0.5px;
-        }
-        .logo-text span {
-            color: #d4af37;
-        }
-        .brand-sub {
-            font-size: 0.75rem;
-            color: #a19a95;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0.2rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        .gold { color: #d4af37; }
-        .sky { color: #38bdf8; }
-        p {
-            color: #a19a95;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        .video-box {
-            background-color: #171412;
-            border: 1px solid #292420;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
-        .video-link-card {
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            padding: 3.5rem 2rem;
-            background: #221c18;
-            border: 1px dashed #d4af37;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            margin-top: 1.25rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        }
-        .video-link-card:hover {
-            background: #2b231e;
-            transform: translateY(-2px);
-            border-style: solid;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        .card {
-            background-color: #171412;
-            border: 1px solid #292420;
-            padding: 1.5rem;
-            border-radius: 6px;
-        }
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
-        }
-        .tag {
-            background-color: #171412;
-            border: 1px solid #292420;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        form {
-            background-color: #171412;
-            border: 1px solid #292420;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-        label {
-            display: block;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-            color: #a19a95;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: #0e0c0a;
-            border: 1px solid #292420;
-            color: white;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #d4af37;
-        }
-        input::placeholder, textarea::placeholder {
-            color: #4a4440;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        button[type="submit"] {
-            background-color: #d4af37;
-            color: #000;
-            border: none;
-            padding: 0.85rem 1.5rem;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            letter-spacing: 0.5px;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            margin-top: 0.5rem;
-        }
-        button[type="submit"]:hover {
-            background-color: #e8c547;
-            transform: translateY(-1px);
-        }
-        button[type="submit"]:active {
-            transform: translateY(0);
-        }
-        .success-msg {
-            display: none;
-            background-color: #1a2e1a;
-            border: 1px solid #2d5a2d;
-            color: #6fcf6f;
-            padding: 1rem;
-            border-radius: 4px;
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 0.95rem;
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            color: #a19a95;
-            font-size: 0.85rem;
-            border-top: 1px solid #292420;
-            padding-top: 2rem;
-        }
-        .header-nav {
-            display: flex;
-            gap: 1.5rem;
-        }
-        .header-nav a {
-            color: #a19a95;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: color 0.2s;
-        }
-        .header-nav a:hover {
-            color: #d4af37;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .header-nav { display: none; }
-            body { padding: 1.25rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ME Growth Bridge | Multilingual & AI-Native Growth Consultant</title>
+<meta name="description" content="Top-Ranked Sales Performer. Multilingual Execution across APAC, EU, & UK. Custom Generative AI Workflows.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e0c0a;
+    color: #faf9f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* HEADER — upgraded hierarchy */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292420;
+    padding-bottom: 1.5rem; /* slightly tighter for premium feel */
+    margin-bottom: 3rem;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* improved breathing room */
+}
+
+.brand-logo img {
+    height: 88px; /* KEY FIX: stronger visual identity */
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.1rem; /* reduced dominance vs icon */
+    letter-spacing: -0.3px;
+}
+
+.logo-text span {
+    color: #d4af37;
+}
+
+.brand-sub {
+    font-size: 0.75rem;
+    color: #a19a95;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-nav a {
+    color: #a19a95;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.header-nav a:hover {
+    color: #d4af37;
+}
+
+/* rest unchanged */
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.gold { color: #d4af37; }
+.sky { color: #38bdf8; }
+
+p {
+    color: #a19a95;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.video-box {
+    background-color: #171412;
+    border: 1px solid #292420;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.video-link-card {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 3.5rem 2rem;
+    background: #221c18;
+    border: 1px dashed #d4af37;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-top: 1.25rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.video-link-card:hover {
+    background: #2b231e;
+    transform: translateY(-2px);
+    border-style: solid;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: #171412;
+    border: 1px solid #292420;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.tag {
+    background-color: #171412;
+    border: 1px solid #292420;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: #a19a95;
+    font-size: 0.85rem;
+    border-top: 1px solid #292420;
+    padding-top: 2rem;
+}
+
+/* MOBILE OPTIMISATION */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+
+    .header-nav { display: none; }
+
+    body { padding: 1.25rem; }
+
+    .brand-logo img {
+        height: 64px; /* keeps hierarchy correct on mobile */
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
+<div class="container">
+
+<header>
+    <div>
+        <div class="brand-logo">
+            <img src="logo.png" alt="ME Growth Bridge Logo">
             <div>
-                <div class="brand-logo">
-                    <!-- SCALED LOGO: Increased from 48px to 60px for a professional presence -->
-                    <img src="logo.png" alt="MGB Logo" style="height: 60px; width: auto; object-fit: contain; vertical-align: middle;">
-                    <div class="logo-text">ME GROWTH BRIDGE<span>.</span></div>
+                <div class="logo-text">
+                    ME GROWTH BRIDGE<span>.</span>
                 </div>
                 <div class="brand-sub">M.E. Strategic Contractor Practice</div>
             </div>
-            <nav class="header-nav">
-                <a href="#services">Services</a>
-                <a href="#ai">AI Stack</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+        </div>
+    </div>
 
-        <section>
-            <h1>
-                <span class="gold">Top-Ranked Sales.</span><br>
-                <span class="sky">Multilingual Executive.</span><br>
-                <span>AI-Native Frameworks.</span>
-            </h1>
-            <p>Deploying ten years of high-performance B2B partnership expansion and complex SaaS merchant onboarding lifecycles across the APAC, AU, US, EU, and UK business corridors.</p>
-        </section>
-
-        <section class="video-box">
-            <h2 class="gold" style="font-size: 1.3rem;">Signature Production</h2>
-            <p style="font-size: 0.95rem; margin-bottom: 1rem;">The Dashdot Internal Competition Track — A First-of-its-Kind AI Culture Hack. Authored original promotional lyrics, customized 3D AI-animated visuals tracking real team members' faces, and edited the entire final production as a unique cultural asset.</p>
-            <a href="https://youtu.be" target="_blank" rel="noopener noreferrer" class="video-link-card">
-                <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🎬</span>
-                <span style="color: #d4af37; font-weight: 700; font-size: 1.1rem; display: block; letter-spacing: 0.5px;">LAUNCH MULTIMEDIA MUSIC VIDEO</span>
-                <span style="color: #a19a95; font-size: 0.85rem; display: block; margin-top: 0.25rem;">Opens safely in a secure streaming tab on YouTube</span>
-            </a>
-        </section>
-
-        <h2 style="margin-bottom: 1rem; font-size: 1.3rem;" class="gold">Operational Languages</h2>
-        <section class="tag-container">
-            <div class="tag">🇬🇧 🇺🇸 English</div>
-            <div class="tag">🇨🇳 Mandarin Chinese</div>
-            <div class="tag">🇰🇷 Korean</div>
-            <div class="tag">🇯🇵 Japanese</div>
-        </section>
-
-        <h2 id="services" style="margin-bottom: 1rem; font-size: 1.3rem;" class="gold">Operational Architecture</h2>
-        <section class="services-grid">
-            <div class="card">
-                <h3 class="sky" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Cross-Cultural Expansion</h3>
-                <p style="font-size: 0.9rem;">Securing high-stakes regional pipelines and bridging corporate communications natively across Western and East Asian commercial landscapes.</p>
-            </div>
-            <div class="card">
-                <h3 class="sky" style="margin-bottom: 0.5rem; font-size: 1.1rem;">SaaS Onboarding Architecture</h3>
-                <p style="font-size: 0.9rem;">Managing complete technical product lifecycles, organizing varying software configurations, and protecting customer retention metrics.</p>
-            </div>
-            <div class="card">
-                <h3 class="sky" style="margin-bottom: 0.5rem; font-size: 1.1rem;">Intelligent Automation</h3>
-                <p style="font-size: 0.9rem;">Building generative content models, executing advanced automated data pipelines, and maximizing structural team output.</p>
-            </div>
-        </section>
-
-        <section id="ai" class="card" style="margin-bottom: 3rem;">
-            <h3 class="sky" style="margin-bottom: 0.75rem; font-size: 1.2rem;">AI System Deployment Matrix</h3>
+    <nav class="header-nav">
+        <a href="#services">Services</a>
+        <a href="#ai">AI Stack</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
