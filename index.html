@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ME Growth Bridge | AI-Native Growth Consultancy</title>
+<title>ME Growth Bridge | AI-Native Growth & Systems Consultancy</title>
 
 <style>
-/* =========================
-   BASE
-========================= */
+/* ========== BASE ========== */
 * {
     margin: 0;
     padding: 0;
@@ -17,70 +15,66 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: #0b0a09;
-    color: #faf9f6;
+    background: #0b0a08;
+    color: #f5f3ee;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* =========================
-   ANIMATED AI BACKGROUND
-   (very subtle network drift)
-========================= */
-.bg-network {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    opacity: 0.35;
-    pointer-events: none;
-}
-
-.bg-network::before,
-.bg-network::after {
+/* ========== SUBTLE BACKGROUND GLOW ========== */
+body::before {
     content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(212,175,55,0.15) 0px, transparent 2px),
-        radial-gradient(circle at 70% 60%, rgba(56,189,248,0.12) 0px, transparent 2px),
-        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.08) 0px, transparent 2px);
-    background-size: 120px 120px;
-    animation: drift 40s linear infinite;
+    position: fixed;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 60%);
+    z-index: 0;
+    animation: floatGlow 12s ease-in-out infinite alternate;
 }
 
-.bg-network::after {
-    filter: blur(1px);
-    opacity: 0.6;
-    animation-duration: 70s;
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56,189,248,0.10), transparent 60%);
+    z-index: 0;
+    animation: floatGlow 14s ease-in-out infinite alternate;
 }
 
-@keyframes drift {
-    from { transform: translate(0,0); }
-    to { transform: translate(-10%, -15%); }
+@keyframes floatGlow {
+    from { transform: translateY(0px); }
+    to { transform: translateY(30px); }
 }
 
-/* =========================
-   LAYOUT
-========================= */
+/* ========== LAYOUT ========== */
 .container {
     position: relative;
     z-index: 1;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 980px;
+    margin: auto;
     padding: 2rem;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ========== HEADER ========== */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(14px);
+    background: rgba(11,10,8,0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #2a241f;
-    margin-bottom: 3rem;
 }
 
 .brand {
@@ -90,9 +84,12 @@ header {
 }
 
 .brand img {
-    height: 88px;
-    width: auto;
-    display: block;
+    height: 72px;
+    transition: transform 0.3s ease;
+}
+
+.brand img:hover {
+    transform: scale(1.05);
 }
 
 .brand-text {
@@ -102,8 +99,7 @@ header {
 
 .brand-title {
     font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
 }
 
 .brand-title span {
@@ -112,58 +108,88 @@ header {
 
 .brand-sub {
     font-size: 0.75rem;
-    color: #a19a95;
-    letter-spacing: 1px;
+    color: #9a948c;
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
 }
 
 nav a {
-    color: #a19a95;
+    color: #b9b2a8;
     text-decoration: none;
-    margin-left: 1.5rem;
     font-size: 0.9rem;
-    transition: 0.2s;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
     color: #d4af37;
 }
 
-/* =========================
-   HERO
-========================= */
-h1 {
-    font-size: 2.6rem;
-    line-height: 1.15;
+/* ========== HERO ========== */
+.hero {
+    margin-bottom: 4rem;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
     margin-bottom: 1rem;
 }
 
-p {
-    color: #a19a95;
+.hero p {
+    color: #b0a89f;
+    max-width: 700px;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
 }
 
 .gold { color: #d4af37; }
-.sky { color: #38bdf8; }
+.blue { color: #38bdf8; }
 
-/* =========================
-   SECTIONS
-========================= */
-.section {
-    margin-bottom: 3rem;
+/* ========== SECTIONS ========== */
+section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-child(n) {
+    animation-delay: 0.1s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== GRID ========== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
 }
 
 .card {
     background: rgba(255,255,255,0.03);
-    border: 1px solid #2a241f;
+    border: 1px solid rgba(255,255,255,0.06);
     padding: 1.5rem;
     border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
-/* =========================
-   TAGS
-========================= */
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.4);
+}
+
+/* ========== TAGS ========== */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -172,131 +198,156 @@ p {
 
 .tag {
     padding: 0.4rem 0.8rem;
-    border: 1px solid #2a241f;
-    border-radius: 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
     font-size: 0.85rem;
-    color: #a19a95;
+    color: #cfc7bb;
 }
 
-/* =========================
-   GRID
-========================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
+/* ========== FORM ========== */
+form {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem;
+    border-radius: 12px;
 }
 
-/* =========================
-   BUTTON
-========================= */
-.button {
-    background: #d4af37;
-    color: black;
-    padding: 0.9rem 1.2rem;
-    border: none;
+input, textarea {
     width: 100%;
+    padding: 0.9rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #0f0e0c;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+button {
+    width: 100%;
+    padding: 0.9rem;
+    background: #d4af37;
+    border: none;
     border-radius: 6px;
     font-weight: 700;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.button:hover {
-    background: #e8c547;
+button:hover {
+    transform: translateY(-2px);
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    color: #8f887f;
+    font-size: 0.85rem;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ========== MOBILE ========== */
 @media (max-width: 600px) {
-    h1 { font-size: 1.8rem; }
+    .hero h1 { font-size: 2rem; }
     nav { display: none; }
-    .brand img { height: 64px; }
+    .brand img { height: 56px; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="bg-network"></div>
-
 <div class="container">
 
+<!-- HEADER -->
 <header>
     <div class="brand">
-        <img src="logo.png" alt="ME Growth Bridge Logo">
-
+        <img src="logo.png" alt="logo">
         <div class="brand-text">
-            <div class="brand-title">ME GROWTH BRIDGE<span>.</span></div>
-            <div class="brand-sub">M.E. Strategic Contractor Practice</div>
+            <div class="brand-title">ME GROWTH <span>BRIDGE</span></div>
+            <div class="brand-sub">AI-Native Systems Consultancy</div>
         </div>
     </div>
 
     <nav>
         <a href="#services">Services</a>
-        <a href="#ai">AI Stack</a>
+        <a href="#stack">AI Stack</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section class="section">
+<!-- HERO -->
+<section class="hero">
     <h1>
-        <span class="gold">Top-Ranked Sales.</span><br>
-        <span class="sky">Multilingual Executive.</span><br>
-        AI-Native Frameworks.
+        <span class="gold">AI Systems.</span><br>
+        <span class="blue">Global Execution.</span><br>
+        High-Performance Growth Infrastructure.
     </h1>
 
     <p>
-        High-performance B2B expansion across APAC, EU, UK, US, and AU — powered by AI-native workflows and multilingual execution systems.
+        Building multilingual, AI-powered commercial systems across APAC, EU, UK, US and AU markets.
+        Focused on automation, scale, and enterprise-grade execution layers.
     </p>
 </section>
 
-<section class="section card">
+<!-- SERVICES -->
+<section id="services">
     <h2 class="gold">Operational Architecture</h2>
     <div class="grid">
-        <div>
-            <h3 class="sky">Cross-Cultural Expansion</h3>
-            <p>Enterprise pipeline scaling across global markets.</p>
-        </div>
-        <div>
-            <h3 class="sky">SaaS Systems</h3>
-            <p>Onboarding architecture and lifecycle optimization.</p>
-        </div>
-        <div>
-            <h3 class="sky">Automation</h3>
-            <p>AI-driven workflow and content systems.</p>
-        </div>
+        <div class="card">Cross-Cultural Market Expansion</div>
+        <div class="card">SaaS Onboarding Systems</div>
+        <div class="card">AI Workflow Automation</div>
     </div>
 </section>
 
-<section id="ai" class="section card">
+<!-- AI STACK -->
+<section id="stack">
     <h2 class="gold">AI System Deployment Matrix</h2>
+    <div class="card">
+        <p style="margin-bottom:1rem;">
+            Enterprise-grade automation and generative AI systems:
+        </p>
 
-    <p style="margin-top:1rem;">
-        Actively scaling enterprise workflows using modern LLMs and multi-modal systems:
-    </p>
-
-    <div style="margin-top:1rem; line-height:1.8;">
-        <span class="gold">✔</span> AI Content Production & Media Execution<br>
-        <span class="gold">✔</span> Prompt Architecture Engineering<br>
-        <span class="gold">✔</span> Workflow Automation & Localization<br>
-        <span class="sky">➜</span> Application Architecture (In Progress)<br>
-        <span class="sky">➜</span> Data Analytics Systems (In Progress)
+        <div class="tags">
+            <div class="tag">Content Generation Systems</div>
+            <div class="tag">Prompt Architecture</div>
+            <div class="tag">Workflow Automation</div>
+            <div class="tag">Localization Engines</div>
+            <div class="tag">Analytics Pipelines</div>
+        </div>
     </div>
 </section>
 
-<section id="contact" class="section card">
+<!-- CONTACT -->
+<section id="contact">
     <h2 class="gold">Initiate Project Briefing</h2>
 
-    <p>Let’s map constraints, markets, and automation opportunities.</p>
+    <form action="https://formspree.io/f/mqevlled" method="POST">
+        <label>Name</label>
+        <input type="text" name="name" required>
 
-    <form>
-        <input class="button" type="submit" value="SEND PROJECT BRIEFING →">
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Company</label>
+        <input type="text" name="company">
+
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Briefing →</button>
     </form>
 </section>
 
-<footer style="text-align:center; margin-top:4rem; color:#777;">
-    © 2026 ME Growth Bridge · APAC · EU · UK · US
+<!-- FOOTER -->
+<footer>
+    © 2026 ME Growth Bridge · APAC · EU · UK · US · AU
 </footer>
 
 </div>
