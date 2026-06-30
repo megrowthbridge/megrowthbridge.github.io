@@ -863,6 +863,25 @@ img {
     text-align: center;
 }
 
+.contact-email {
+    text-align: center;
+    margin: 1rem auto 1.5rem;
+    font-size: 0.95rem;
+    color: var(--muted-light);
+}
+
+.contact-email a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.contact-email a:hover {
+    color: #E0BC44;
+    text-decoration: underline;
+}
+
 .contact-note {
     color: var(--muted);
     font-size: 0.95rem;
