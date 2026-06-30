@@ -549,7 +549,20 @@ img {
     line-height: 1.7;
     margin-bottom: 1.25rem;
 }
- 
+
+.project-type{
+    display:inline-block;
+    margin-bottom:.75rem;
+    padding:.3rem .75rem;
+    border:1px solid rgba(212,175,55,.4);
+    color:var(--gold);
+    border-radius:999px;
+    font-size:.72rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
 .project-link-label {
     display: inline-flex;
     align-items: center;
