@@ -284,7 +284,7 @@ img {
  
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
-    padding: 5rem 0 3.5rem;   /* was 10rem 0 7rem — cut roughly in half */
+    padding: calc(64px + 3rem) 0 3rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -318,6 +318,21 @@ img {
     max-width: 520px;          /* was 560px */
     margin-bottom: 1.5rem;     /* was 2.5rem */
     line-height: 1.6;          /* was 1.7 */
+}
+
+.hero-sub-muted {
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.hero-availability {
+    font-size: 0.95rem;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 .hero-actions {
