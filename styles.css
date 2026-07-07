@@ -1110,6 +1110,72 @@ textarea {
     color: var(--gold);
 }
 
+/* ==================================================
+   IMPACT HIGHLIGHTS
+================================================== */
+
+.impact-strip{
+
+    margin-top:2rem;
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1rem;
+
+}
+
+.impact-card{
+
+    padding:1.2rem;
+
+    background:var(--black-card);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    text-align:center;
+
+    transition:.25s ease;
+
+}
+
+.impact-card:hover{
+
+    border-color:var(--gold);
+
+    transform:translateY(-3px);
+
+}
+
+.impact-number{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    font-size:1.05rem;
+
+    margin-bottom:.35rem;
+
+}
+
+.impact-text{
+
+    font-size:.82rem;
+
+    color:var(--muted-light);
+
+}
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
     :root { --section-gap: 5rem; }
