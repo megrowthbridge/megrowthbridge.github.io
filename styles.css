@@ -1069,7 +1069,47 @@ textarea {
     opacity: 0;
     animation: fadeUp 0.6s ease forwards;
 }
- 
+
+/* TRUSTED EXPERIENCE */
+.trusted-strip {
+    margin-top: 2.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.trusted-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.trusted-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.trusted-tag {
+    padding: 0.4rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--muted-light);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.trusted-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
     :root { --section-gap: 5rem; }
