@@ -32,7 +32,7 @@
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body:    'Inter', -apple-system, sans-serif;
     --transition:   0.22s ease;
-    --section-gap: 6rem;
+    --section-gap: 5.25rem;
 }
  
 html {
@@ -88,7 +88,7 @@ img {
     font-weight: 400;
     line-height: 1.2;
     color: var(--white);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
  
 .ampersand {
