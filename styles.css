@@ -280,6 +280,12 @@ img {
     .nav-toggle {
         display: flex;
     }
+    .exec-grid {
+        grid-template-columns: 1fr;
+    }
+    .exec-card {
+        padding: 1.35rem;
+    }
 }
  
 /* ── Hero ─────────────────────────────────────────────────── */
