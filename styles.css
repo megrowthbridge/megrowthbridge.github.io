@@ -277,14 +277,25 @@ img {
     .nav-links {
         display: none;
     }
+
     .nav-toggle {
         display: flex;
     }
+
     .exec-grid {
         grid-template-columns: 1fr;
     }
+
     .exec-card {
         padding: 1.35rem;
+    }
+
+    .cred-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 on mobile */
+    }
+
+    .cred-card {
+        padding: 1.25rem 1rem;
     }
 }
  
