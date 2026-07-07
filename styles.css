@@ -32,7 +32,7 @@
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body:    'Inter', -apple-system, sans-serif;
     --transition:   0.22s ease;
-    --section-gap: 8rem;
+    --section-gap: 6rem;
 }
  
 html {
