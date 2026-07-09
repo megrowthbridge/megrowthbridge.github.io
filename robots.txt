@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://www.megrowthbridge.com/sitemap.xml
+Sitemap: https://megrowthbridge.com/sitemap.xml
