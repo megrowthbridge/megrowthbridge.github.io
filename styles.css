@@ -807,13 +807,22 @@ img {
     padding: var(--section-gap) 0;
     border-bottom: 1px solid var(--border);
 }
- 
+
+.focus-intro {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
 .focus-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
- 
+
 .focus-item {
     background: var(--black-card);
     border: 1px solid var(--border);
@@ -824,12 +833,12 @@ img {
     gap: 1rem;
     transition: border-color var(--transition), background var(--transition);
 }
- 
+
 .focus-item:hover {
     border-color: var(--border-gold);
     background: var(--black-hover);
 }
- 
+
 .focus-bar {
     width: 3px;
     height: 28px;
@@ -838,7 +847,7 @@ img {
     flex-shrink: 0;
     opacity: 0.8;
 }
- 
+
 .focus-item span {
     font-size: 0.92rem;
     font-weight: 600;
