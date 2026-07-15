@@ -1,102 +1,137 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ==========================================================
+       CONTACT FORM
+    ========================================================== */
+
     const form = document.getElementById("contactForm");
 
-    if (!form) return;
+    if (form) {
 
-    const submitBtn = document.getElementById("submitBtn");
-    const btnText = submitBtn.querySelector(".btn-text");
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = submitBtn?.querySelector(".btn-text");
 
-    const success = document.getElementById("formSuccess");
-    const error = document.getElementById("formError");
+        const success = document.getElementById("formSuccess");
+        const error = document.getElementById("formError");
 
-    form.addEventListener("submit", async function(e){
+        if (
+            submitBtn &&
+            btnText &&
+            success &&
+            error
+        ) {
 
-        e.preventDefault();
+            form.addEventListener("submit", async function (e) {
 
-        success.style.display = "none";
-        error.style.display = "none";
+                e.preventDefault();
 
-        submitBtn.classList.add("loading");
-        submitBtn.disabled = true;
+                success.style.display = "none";
+                error.style.display = "none";
 
-        btnText.textContent = "Sending...";
+                submitBtn.disabled = true;
+                submitBtn.classList.add("loading");
+                btnText.textContent = "Sending...";
 
-        try{
+                try {
 
-            const response = await fetch(form.action,{
-                method:"POST",
-                body:new FormData(form),
-                headers:{
-                    Accept:"application/json"
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    });
+
+                    if (response.ok) {
+
+                        form.reset();
+                        success.style.display = "block";
+
+                    } else {
+
+                        error.style.display = "block";
+
+                    }
+
+                } catch {
+
+                    error.style.display = "block";
+
                 }
+
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("loading");
+                btnText.textContent = "Send Message / Inquiry";
+
             });
-
-            if(response.ok){
-
-                form.reset();
-
-                success.style.display="block";
-
-            }else{
-
-                error.style.display="block";
-
-            }
-
-        }catch{
-
-            error.style.display="block";
 
         }
 
-        submitBtn.classList.remove("loading");
-        submitBtn.disabled=false;
+    }
 
-        btnText.textContent="Send Message / Inquiry";
+    /* ==========================================================
+       VIDEO MODAL
+    ========================================================== */
 
-    });
+    const trigger = document.getElementById("videoTrigger");
+    const modal = document.getElementById("videoModal");
+    const closeBtn = document.getElementById("videoClose");
+    const frame = document.getElementById("youtubeFrame");
 
-});
+    const videoURL =
+        "https://www.youtube-nocookie.com/embed/fD0xMgvViqg?autoplay=1";
 
-const trigger = document.getElementById("videoTrigger");
+    if (
+        trigger &&
+        modal &&
+        closeBtn &&
+        frame
+    ) {
 
-const modal = document.getElementById("videoModal");
+        function openVideo() {
 
-const closeBtn = document.getElementById("videoClose");
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
 
-const frame = document.getElementById("youtubeFrame");
+            frame.src = videoURL;
 
-const videoURL =
-"https://www.youtube-nocookie.com/embed/fD0xMgvViqg?autoplay=1";
+        }
 
-if(trigger){
+        function closeVideo() {
 
-    trigger.addEventListener("click",()=>{
+            modal.style.display = "none";
+            document.body.style.overflow = "";
 
-        modal.style.display="flex";
+            frame.src = "";
 
-        frame.src=videoURL;
+        }
 
-    });
+        trigger.addEventListener("click", openVideo);
 
-}
+        closeBtn.addEventListener("click", closeVideo);
 
-function closeVideo(){
+        modal.addEventListener("click", (e) => {
 
-    modal.style.display="none";
+            if (e.target === modal) {
 
-    frame.src="";
+                closeVideo();
 
-}
+            }
 
-closeBtn.addEventListener("click",closeVideo);
+        });
 
-modal.addEventListener("click",(e)=>{
+        document.addEventListener("keydown", (e) => {
 
-    if(e.target===modal){
+            if (
+                e.key === "Escape" &&
+                modal.style.display === "flex"
+            ) {
 
-        closeVideo();
+                closeVideo();
+
+            }
+
+        });
 
     }
 
