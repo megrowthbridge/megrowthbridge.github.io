@@ -1252,7 +1252,38 @@ textarea {
     .hero-actions { flex-direction: column; }
     .btn-primary, .btn-ghost { text-align: center; }
 }
- 
+
+/* ========================================
+   Contact Form States
+======================================== */
+
+.success-message,
+.error-message {
+    display: none;
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.success-message {
+    background: rgba(39, 174, 96, 0.12);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.35);
+}
+
+.error-message {
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.35);
+}
+
+.submit-btn.loading {
+    opacity: 0.75;
+    pointer-events: none;
+    cursor: wait;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
