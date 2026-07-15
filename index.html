@@ -217,7 +217,7 @@
         <div class="section-eyebrow">Selected Work</div>
         <h2 class="section-title">Brand Anthem <span class="ampersand">&amp;</span> AI Music Video</h2>
  
-        <a href="https://youtu.be/fD0xMgvViqg" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="project-card video-trigger" id="videoTrigger">
             <div class="project-thumbnail">
                 <img src="https://img.youtube.com/vi/fD0xMgvViqg/maxresdefault.jpg"
                      alt="Sample Brand Anthem AI Music Video">
@@ -286,7 +286,6 @@
                     </svg>
                 </div>
             </div>
-        </a>
     </div>
 </section>
 
@@ -454,6 +453,31 @@
         </section> 
     </main> 
 
+<!-- Video Modal -->
+
+<div class="video-modal" id="videoModal">
+
+    <div class="video-backdrop"></div>
+
+    <div class="video-content">
+
+        <button class="video-close" id="videoClose">
+            &times;
+        </button>
+
+        <iframe
+            id="youtubeFrame"
+            src=""
+            title="Brand Anthem"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
+    
     <!-- Footer Area --> 
     <footer class="footer"> 
         <div class="container"> 
