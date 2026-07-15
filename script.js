@@ -58,3 +58,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const trigger = document.getElementById("videoTrigger");
+
+const modal = document.getElementById("videoModal");
+
+const closeBtn = document.getElementById("videoClose");
+
+const frame = document.getElementById("youtubeFrame");
+
+const videoURL =
+"https://www.youtube-nocookie.com/embed/fD0xMgvViqg?autoplay=1";
+
+if(trigger){
+
+    trigger.addEventListener("click",()=>{
+
+        modal.style.display="flex";
+
+        frame.src=videoURL;
+
+    });
+
+}
+
+function closeVideo(){
+
+    modal.style.display="none";
+
+    frame.src="";
+
+}
+
+closeBtn.addEventListener("click",closeVideo);
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        closeVideo();
+
+    }
+
+});
