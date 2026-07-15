@@ -470,7 +470,7 @@
             src=""
             title="Brand Anthem"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; encrypted-media; picture-in-picture"
             allowfullscreen>
         </iframe>
 
@@ -502,17 +502,6 @@
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-        // Formspree submit status feedback handler
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function() {
-                setTimeout(() => {
-                    const successDiv = document.getElementById('formSuccess');
-                    if (successDiv) successDiv.style.display = 'block';
-                }, 500);
-            });
-        }
 
         // Navigation mobile interaction systems hook
         const toggleBtn = document.getElementById('navToggle');
