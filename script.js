@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function openVideo() {
 
+            modal.classList.add("is-open");
             modal.style.display = "flex";
+
+            modal.setAttribute("aria-hidden", "false");
+
             document.body.style.overflow = "hidden";
 
             frame.src = videoURL;
@@ -94,7 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function closeVideo() {
 
+            modal.classList.remove("is-open");
             modal.style.display = "none";
+
+            modal.setAttribute("aria-hidden", "true");
+
             document.body.style.overflow = "";
 
             frame.src = "";
@@ -117,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener("keydown", (e) => {
 
-            if (e.key === "Escape" && modal.style.display === "flex") {
+            if (e.key === "Escape" && modal.classList.contains("is-open")) {
 
                 closeVideo();
 
