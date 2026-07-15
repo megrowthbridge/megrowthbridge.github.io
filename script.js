@@ -14,14 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const success = document.getElementById("formSuccess");
         const error = document.getElementById("formError");
 
-        if (
-            submitBtn &&
-            btnText &&
-            success &&
-            error
-        ) {
+        if (submitBtn && btnText && success && error) {
 
-            form.addEventListener("submit", async function (e) {
+            const defaultButtonText = btnText.textContent;
+
+            form.addEventListener("submit", async (e) => {
 
                 e.preventDefault();
 
@@ -53,15 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     }
 
-                } catch {
+                } catch (err) {
 
+                    console.error("Contact form error:", err);
                     error.style.display = "block";
 
-                }
+                } finally {
 
-                submitBtn.disabled = false;
-                submitBtn.classList.remove("loading");
-                btnText.textContent = "Send Message / Inquiry";
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove("loading");
+                    btnText.textContent = defaultButtonText;
+
+                }
 
             });
 
@@ -81,12 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoURL =
         "https://www.youtube-nocookie.com/embed/fD0xMgvViqg?autoplay=1";
 
-    if (
-        trigger &&
-        modal &&
-        closeBtn &&
-        frame
-    ) {
+    if (trigger && modal && closeBtn && frame) {
 
         function openVideo() {
 
@@ -122,10 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener("keydown", (e) => {
 
-            if (
-                e.key === "Escape" &&
-                modal.style.display === "flex"
-            ) {
+            if (e.key === "Escape" && modal.style.display === "flex") {
 
                 closeVideo();
 
