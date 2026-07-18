@@ -531,7 +531,7 @@ img {
 .project-card:hover{
     transform:translateY(-6px);
     border-color:rgba(212,175,55,.35);
-    box-shadow:0 24px 60px rgba(0,0,0,.45);
+    box-shadow: 0 16px 48px rgba(30, 20, 0, 0.12);
 }
 
 /* ---------- Thumbnail ---------- */
@@ -540,7 +540,7 @@ img {
     position:relative;
     overflow:hidden;
     aspect-ratio:16/7;
-    background:#111;
+    background: #e8e2d6;
 }
 
 .project-thumbnail img{
@@ -560,7 +560,7 @@ img {
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#191511,#0d0b09);
+    background: linear-gradient(135deg, #e8e2d6, #d4cbbb);
 }
 
 /* ---------- Play Button ---------- */
@@ -631,9 +631,9 @@ img {
 .tag{
     padding:.45rem .85rem;
     border-radius:999px;
-    background:rgba(56,189,248,.08);
-    border:1px solid rgba(56,189,248,.18);
-    color:#67c8ff;
+    background: rgba(2, 132, 199, 0.07);
+    border: 1px solid rgba(2, 132, 199, 0.2);
+    color: #0284C7;
     font-size:.78rem;
     font-weight:600;
 }
@@ -658,7 +658,7 @@ img {
 
 .fact{
     padding-bottom:.9rem;
-    border-bottom:1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(30, 25, 20, 0.08);
 }
 
 .fact:last-child{
@@ -1011,7 +1011,7 @@ textarea {
     gap: 0.625rem;
     width: 100%;
     background: var(--gold);
-    color: var(--black);
+    color: #1a1108;
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.92rem;
@@ -1061,15 +1061,15 @@ textarea {
 }
  
 .form-success {
-    background: rgba(34, 85, 34, 0.25);
-    border: 1px solid rgba(80, 160, 80, 0.3);
-    color: #80c880;
+    background: rgba(39, 174, 96, 0.10);
+    border: 1px solid rgba(39, 174, 96, 0.30);
+    color: #1a6b35;
 }
  
 .form-error {
-    background: rgba(85, 34, 34, 0.25);
-    border: 1px solid rgba(160, 80, 80, 0.3);
-    color: #c88080;
+    background: rgba(185, 50, 50, 0.08);
+    border: 1px solid rgba(185, 50, 50, 0.25);
+    color: #9b2020;
 }
  
 /* ── Footer ───────────────────────────────────────────────── */
@@ -1146,7 +1146,7 @@ textarea {
     padding: 0.4rem 1.1rem;
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(30, 25, 20, 0.04);
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--muted-light);
