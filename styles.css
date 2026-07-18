@@ -120,11 +120,16 @@ img {
     left: 0;
     right: 0;
     z-index: 100;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border-bottom: 1px solid var(--border);
-    transition: background var(--transition);
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(15,23,42,0.08);
+
+    box-shadow: 0 2px 18px rgba(15,23,42,0.04);
+
+    transition: all .25s ease;
 }
  
 .nav-inner {
@@ -166,8 +171,8 @@ img {
     font-weight: 700;
     font-size: 1.05rem;
     letter-spacing: -0.02em;
-    color: var(--white);
-    transition: color 0.25s ease;
+    color: #0F172A;
+    transition: color .25s ease;
 }
 
 .nav-brand:hover .nav-name {
@@ -190,15 +195,15 @@ img {
 }
  
 .nav-links a {
-    font-size: 0.88rem;
+    font-size: .88rem;
     font-weight: 500;
-    color: var(--muted-light);
+    color: #475569;
     text-decoration: none;
-    transition: color var(--transition);
+    transition: .22s ease;
 }
  
-.nav-links a:hover { 
-    color: var(--white); 
+.nav-links a:hover {
+    color: var(--gold);
 }
  
 /* Fixed: Stripped out the gold background button properties to ensure total text consistency */
