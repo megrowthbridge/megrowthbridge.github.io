@@ -973,9 +973,9 @@ label {
  
 input,
 textarea {
-    background: var(--black);
-    border: 1px solid var(--border);
-    color: var(--white);
+    background: #ffffff;
+    border: 1px solid #d4c5a0;
+    color: #1a1a1a;
     border-radius: var(--radius-sm);
     padding: 0.75rem 1rem;
     font-family: var(--font-body);
@@ -988,12 +988,14 @@ input:focus,
 textarea:focus {
     outline: none;
     border-color: var(--gold);
+    background: #fdfaf4;
 }
  
 input::placeholder,
 textarea::placeholder {
     color: var(--muted);
     font-size: 0.9rem;
+    opacity: 1;
 }
  
 textarea {
