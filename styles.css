@@ -11,30 +11,31 @@
 }
  
 :root {
-    /* Backgrounds */
-    --black:       #F7F9FC;
-    --black-mid:   #FFFFFF;
+    /* ── Light Premium Theme ───────────────────────── */
+
+    --black:       #F3F1EC;
+    --black-mid:   #FAF8F4;
     --black-card:  #FFFFFF;
-    --black-hover: #F2F5F9;
+    --black-hover: #F5F1EA;
 
     /* Borders */
-    --border:      rgba(15, 23, 42, 0.08);
-    --border-gold: rgba(212, 175, 55, 0.25);
+    --border:      rgba(30, 25, 20, 0.10);
+    --border-gold: rgba(184, 138, 27, 0.30);
 
     /* Brand */
-    --gold:        #C9A227;
-    --gold-dim:    rgba(201, 162, 39, 0.12);
+    --gold:        #B88A1B;
+    --gold-dim:    rgba(184, 138, 27, 0.12);
 
-    --sky:         #38BDF8;
-    --sky-dim:     rgba(56,189,248,0.10);
+    --sky:         #0284C7;
+    --sky-dim:     rgba(2, 132, 199, 0.10);
 
     /* Text */
-    --white:       #1E293B;
-    --muted:       #64748B;
-    --muted-light: #94A3B8;
+    --white:       #23201D;
+    --muted:       #756F68;
+    --muted-light: #9B948C;
 
     /* Glass */
-    --glass-bg:    rgba(255,255,255,0.72);
+    --glass-bg:    rgba(255,255,255,0.75);
     --glass-blur:  blur(18px);
 
     /* Radius */
@@ -43,15 +44,21 @@
     --radius-lg:   16px;
 
     /* Fonts */
-    --font-display:'DM Serif Display', Georgia, serif;
-    --font-body:'Inter', -apple-system, sans-serif;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body:    'Inter', -apple-system, sans-serif;
 
-    --transition:0.22s ease;
-    --section-gap:5.25rem;
+    --transition:   0.22s ease;
+    --section-gap:  5.25rem;
 }
  
 body {
-    background-color: var(--black);
+    background:
+        linear-gradient(
+            180deg,
+            #F3F1EC 0%,
+            #FAF8F4 100%
+        );
+
     color: var(--white);
     font-family: var(--font-body);
     line-height: 1.65;
@@ -75,7 +82,7 @@ img {
  
 /* ── Utility ──────────────────────────────────────────────── */
 .container {
-    max-width: 1000px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 2rem;
 }
