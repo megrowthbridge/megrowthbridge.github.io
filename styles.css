@@ -64,26 +64,34 @@ nav .container {
 }
 
 .site-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:10px !important;
+    width:auto !important;
+    height:auto !important;
     text-decoration:none;
 }
+
 .site-logo img{
-    width:30px;
-    height:30px;
-    display:block;
-    flex-shrink:0;
+    width:28px !important;
+    height:28px !important;
+    min-width:28px !important;
+    max-width:28px !important;
+    display:block !important;
 }
+
 .logo-text{
-    font-family:var(--font-display);
-    font-size:1rem;
+    display:inline !important;
+    font-size:1rem !important;
     font-weight:700;
-    color:var(--text);
-    white-space:nowrap;
+    line-height:1 !important;
+    white-space:nowrap !important;
 }
+
 .logo-accent{
-    color:var(--gold);
+    color:var(--accent-gold);
 }
 
 .nav-links {
