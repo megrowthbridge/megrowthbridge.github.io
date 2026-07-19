@@ -139,6 +139,21 @@ nav .container {
   width: 100%;
 }
 
+.site-logo img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
 /* ---------- CTA ---------- */
 
 .nav-cta {
