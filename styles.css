@@ -487,6 +487,38 @@ nav .container {
   color: var(--gold);
 }
 
+/* Selected Work */
+
+.selected-work{
+    margin-top:2.2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.6rem;
+}
+
+.selected-work-label{
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.selected-work-companies{
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--text);
+}
+
+.selected-work-companies .divider{
+    color:var(--gold);
+    opacity:.7;
+}
+
 /* ============================================
    CREDIBILITY STRIP
    ============================================ */
