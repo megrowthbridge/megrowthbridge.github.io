@@ -74,7 +74,7 @@ nav .container {
     text-decoration:none;
 }
 
-.site-logo img{
+.site-logo svg{
     width:28px !important;
     height:28px !important;
     min-width:28px !important;
