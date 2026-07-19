@@ -423,6 +423,18 @@ nav .container {
   margin-bottom: 1.75rem;
 }
 
+.hero .container{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:860px;
+    margin:0;
+    text-align:left;
+}
+
 /* ── Buttons ── */
 .btn-primary {
   display: inline-flex;
