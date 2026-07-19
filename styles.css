@@ -122,27 +122,31 @@ nav .container {
 }
 
 /* ── FIXED: Navbar Logo ── */
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text);
-  text-decoration: none;
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
-.nav-brand svg,
-.nav-brand img {
-  width: 34px;
-  height: 34px;
-  display: block;
-  flex-shrink: 0;
+.brand-logo{
+    width:34px;
+    height:34px;
+    display:block;
+    flex-shrink:0;
 }
 
-.nav-brand .accent {
-  color: var(--cyan);
+.brand-text{
+    font-family:var(--font-display);
+    font-size:1rem;
+    font-weight:700;
+    color:var(--text);
+    white-space:nowrap;
+    line-height:1;
+}
+
+.brand-text .accent{
+    color:var(--gold);
 }
 
 /* ── Nav Links ── */
