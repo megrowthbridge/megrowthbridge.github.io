@@ -491,19 +491,19 @@ nav .container {
 .selected-work {
   margin-top: 2.5rem;
   padding: 1.25rem 1.75rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   backdrop-filter: blur(12px);
-  display: flex;
+  -webkit-backdrop-filter: blur(12px);
+  display: inline-flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: fit-content;
   transition: border-color 0.35s ease, transform 0.35s ease;
 }
 
 .selected-work:hover {
-  border-color: var(--border-gold);
+  border-color: rgba(255, 184, 0, 0.25);
   transform: translateY(-2px);
 }
 
@@ -511,8 +511,9 @@ nav .container {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--gold);
+  color: #FFB800;
   font-weight: 600;
+  margin: 0;
 }
 
 .selected-companies {
@@ -520,27 +521,26 @@ nav .container {
   align-items: center;
   gap: 0.85rem;
   flex-wrap: wrap;
-  font-family: var(--font-display);
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text);
+  color: #F8FAFC;
 }
 
 .selected-companies .divider {
-  color: var(--gold);
+  color: #FFB800;
   font-size: 0.55rem;
   opacity: 0.7;
 }
 
 .company-name {
-  transition: color var(--transition);
+  transition: color 0.25s ease;
 }
 
 .selected-work:hover .company-name {
-  color: var(--gold);
+  color: #FFB800;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .selected-work {
     width: 100%;
@@ -548,7 +548,6 @@ nav .container {
     align-items: center;
     padding: 1.25rem 1rem;
   }
-
   .selected-companies {
     justify-content: center;
   }
