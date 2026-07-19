@@ -417,8 +417,8 @@ nav .container {
 }
 
 .brand-logo{
-    width:42px;
-    height:42px;
+    width:44px;
+    height:44px;
     display:block;
     flex-shrink:0;
 }
@@ -1437,8 +1437,8 @@ footer{
 }
 
 .footer-brand img{
-    width:24px;
-    height:24px;
+    width:34px;
+    height:34px;
     display:block;
     object-fit:contain;
 }
