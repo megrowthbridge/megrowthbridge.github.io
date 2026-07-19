@@ -70,43 +70,36 @@ nav .container {
 
 /* ---------- Logo ---------- */
 
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
-.nav-brand img {
-  width: 34px;
-  height: 34px;
-  display: block;
-  flex-shrink: 0;
+.nav-brand img{
+    width:34px;
+    height:34px;
+    display:block;
+    flex-shrink:0;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
 }
 
-.brand-top {
-  font-size: 0.70rem;
-  color: var(--muted);
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.brand-name{
+    font-family:var(--font-display);
+    font-size:1.05rem;
+    font-weight:700;
+    color:var(--text);
+    white-space:nowrap;
 }
 
-.brand-bottom {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.brand-bottom .accent {
-  color: var(--accent-gold);
+.accent{
+    color:var(--gold);
 }
 
 /* ---------- Navigation Links ---------- */
