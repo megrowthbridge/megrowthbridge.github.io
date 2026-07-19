@@ -489,15 +489,16 @@ nav .container {
 
 /* ── Selected Work ── */
 .selected-work {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: 1.25rem 1.75rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   backdrop-filter: blur(12px);
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: fit-content;
   transition: border-color 0.35s ease, transform 0.35s ease;
 }
 
