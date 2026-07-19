@@ -1,138 +1,74 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ============================================
+   ME GROWTH BRIDGE — AUSTRALIAN EDITION
+   JavaScript | Interactions & Animations
+   ============================================ */
 
-    /* ==========================================================
-       CONTACT FORM
-    ========================================================== */
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
-    const form = document.getElementById("contactForm");
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
 
-    if (form) {
+// Intersection Observer for reveal animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-        const submitBtn = document.getElementById("submitBtn");
-        const btnText = submitBtn?.querySelector(".btn-text");
-
-        const success = document.getElementById("formSuccess");
-        const error = document.getElementById("formError");
-
-        if (submitBtn && btnText && success && error) {
-
-            const defaultButtonText = btnText.textContent;
-
-            form.addEventListener("submit", async (e) => {
-
-                e.preventDefault();
-
-                success.style.display = "none";
-                error.style.display = "none";
-
-                submitBtn.disabled = true;
-                submitBtn.classList.add("loading");
-                btnText.textContent = "Sending...";
-
-                try {
-
-                    const response = await fetch(form.action, {
-                        method: "POST",
-                        body: new FormData(form),
-                        headers: {
-                            Accept: "application/json"
-                        }
-                    });
-
-                    if (response.ok) {
-
-                        form.reset();
-                        success.style.display = "block";
-
-                    } else {
-
-                        error.style.display = "block";
-
-                    }
-
-                } catch (err) {
-
-                    console.error("Contact form error:", err);
-                    error.style.display = "block";
-
-                } finally {
-
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove("loading");
-                    btnText.textContent = defaultButtonText;
-
-                }
-
-            });
-
-        }
-
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
     }
+  });
+}, observerOptions);
 
-    /* ==========================================================
-       VIDEO MODAL
-    ========================================================== */
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    const trigger = document.getElementById("videoTrigger");
-    const modal = document.getElementById("videoModal");
-    const closeBtn = document.getElementById("videoClose");
-    const frame = document.getElementById("youtubeFrame");
+// Animated counters
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
 
-    const videoURL =
-        "https://www.youtube-nocookie.com/embed/fD0xMgvViqg?autoplay=1";
-
-    if (trigger && modal && closeBtn && frame) {
-
-        function openVideo() {
-
-            modal.classList.add("is-open");
-            modal.style.display = "flex";
-
-            modal.setAttribute("aria-hidden", "false");
-
-            document.body.style.overflow = "hidden";
-
-            frame.src = videoURL;
-
+      const updateCounter = () => {
+        current += step;
+        if (current < target) {
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
         }
+      };
 
-        function closeVideo() {
-
-            modal.classList.remove("is-open");
-            modal.style.display = "none";
-
-            modal.setAttribute("aria-hidden", "true");
-
-            document.body.style.overflow = "";
-
-            frame.src = "";
-
-        }
-
-        trigger.addEventListener("click", openVideo);
-
-        closeBtn.addEventListener("click", closeVideo);
-
-        modal.addEventListener("click", (e) => {
-
-            if (e.target === modal) {
-
-                closeVideo();
-
-            }
-
-        });
-
-        document.addEventListener("keydown", (e) => {
-
-            if (e.key === "Escape" && modal.classList.contains("is-open")) {
-
-                closeVideo();
-
-            }
-
-        });
-
+      updateCounter();
+      counterObserver.unobserve(counter);
     }
+  });
+}, { threshold: 0.5 });
 
+document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
