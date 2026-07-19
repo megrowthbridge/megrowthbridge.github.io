@@ -93,7 +93,19 @@ nav .container {
 .logo-accent{
     color:var(--accent-gold);
 }
+.nav-brand span{
+    line-height:1.2;
+    font-size:.72rem;
+    color:var(--muted);
+}
 
+.nav-brand strong{
+    display:block;
+    font-size:1.02rem;
+    color:var(--text);
+    font-weight:700;
+    margin-top:2px;
+}
 .nav-links {
   display: flex;
   gap: 36px;
