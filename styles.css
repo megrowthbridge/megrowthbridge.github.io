@@ -1061,52 +1061,49 @@ textarea {
    FOOTER
    ============================================ */
 
-footer {
-  padding: 3rem 0;
-  text-align: center;
+footer{
+    padding:3rem 0;
+    text-align:center;
 }
 
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+.footer-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.75rem;
 }
 
-/* ── FIXED: Footer Logo ── */
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--text);
-  text-decoration: none;
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:.65rem;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:700;
+    font-size:.95rem;
 }
 
-.footer-brand svg,
-.footer-brand img {
-  width: 24px;
-  height: 24px;
-  display: block;
-  flex-shrink: 0;
+.footer-brand img{
+    width:24px;
+    height:24px;
+    display:block;
+    object-fit:contain;
 }
 
-.footer-brand .accent {
-  color: var(--cyan);
+.footer-brand .accent{
+    color:var(--gold);
 }
 
-.footer-note {
-  font-size: 0.82rem;
-  color: var(--muted);
-  max-width: 480px;
-  line-height: 1.65;
+.footer-note{
+    font-size:.82rem;
+    color:var(--muted);
+    max-width:480px;
+    line-height:1.65;
 }
 
-.footer-copy {
-  font-size: 0.78rem;
-  color: var(--muted-light);
-  letter-spacing: 0.04em;
+.footer-copy{
+    font-size:.78rem;
+    color:var(--muted-light);
 }
 
 /* ============================================
