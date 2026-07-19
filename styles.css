@@ -75,16 +75,16 @@ nav .container {
 }
 
 .site-logo svg{
-    width:28px !important;
-    height:28px !important;
-    min-width:28px !important;
-    max-width:28px !important;
+    width:36px !important;
+    height:46px !important;
+    min-width:32px !important;
+    max-width:32px !important;
     display:block !important;
 }
 
 .logo-text{
     display:inline !important;
-    font-size:1rem !important;
+    font-size:1.1rem !important;
     font-weight:700;
     line-height:1 !important;
     white-space:nowrap !important;
