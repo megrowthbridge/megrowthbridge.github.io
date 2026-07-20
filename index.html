@@ -29,6 +29,7 @@
 
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
+      <li><a href="#voice-ai">Voice AI</a></li>
       <li><a href="#execution">Execution</a></li>
       <li><a href="#focus">Focus</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -45,6 +46,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#work" class="mobile-link">Work</a></li>
+      <li><a href="#voice-ai" class="mobile-link">Voice AI</a></li>
       <li><a href="#execution" class="mobile-link">Execution</a></li>
       <li><a href="#focus" class="mobile-link">Focus</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
@@ -107,7 +109,7 @@
 </div>
 <div class="cred-card">
 <span class="cred-icon">&#9670;</span>
-<span class="cred-number">APAC US EU UK</span>
+<span class="cred-number">APAC ∘ US ∘ EU ∘ UK</span>
 <span class="cred-label">Remote Experience</span>
 </div>
 <div class="cred-card">
@@ -171,6 +173,134 @@
 </span>
 </div>
 </div>
+</div>
+</section>
+
+<!-- ── Voice AI Project ── -->
+<section id="voice-ai">
+<div class="container">
+  <p class="section-eyebrow">Next Project &middot; In Development</p>
+  <h2 class="section-title">Voice AI <span class="ampersand">&amp;</span> Automation Pipeline</h2>
+
+  <div class="voice-ai-card reveal">
+
+    <!-- Left: Description -->
+    <div class="vai-desc">
+      <div class="project-tags" style="margin-bottom:1.25rem">
+        <span class="tag tag-gold">Vapi</span>
+        <span class="tag">Make.com</span>
+        <span class="tag">HubSpot</span>
+        <span class="tag">Google Calendar</span>
+        <span class="tag">Twilio</span>
+        <span class="tag">Gmail</span>
+      </div>
+      <p class="project-desc">An end-to-end AI voice operations system where a Vapi-powered AI assistant conducts discovery calls, then automatically routes structured data through Make.com to sync leads into HubSpot CRM, schedule calendar appointments, send SMS confirmations via Twilio, and dispatch Gmail confirmations &mdash; fully automated, zero manual entry.</p>
+      <div class="project-facts" style="margin-top:1.5rem">
+        <div class="fact">
+          <span class="fact-label">Role</span>
+          <span class="fact-value">Architect &middot; Systems Design &middot; Workflow Automation</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">AI Stack</span>
+          <span class="fact-value">Vapi &middot; Make.com &middot; HubSpot &middot; Google Calendar &middot; Twilio &middot; Gmail</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Status</span>
+          <span class="fact-value">
+            <span class="status-badge"><span class="status-dot"></span>In Development</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Pipeline Visual -->
+    <div class="vai-pipeline">
+      <p class="pipeline-label">Automation Flow</p>
+
+      <!-- Step 1: Customer -->
+      <div class="pipe-node pipe-node--user">
+        <div class="pipe-node__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="pipe-node__label">Customer</span>
+      </div>
+
+      <div class="pipe-arrow"><div class="pipe-arrow__line"><div class="pipe-arrow__pulse"></div></div></div>
+
+      <!-- Step 2: Vapi -->
+      <div class="pipe-node pipe-node--vapi">
+        <div class="pipe-node__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <span class="pipe-node__label">Vapi Voice AI</span>
+        <span class="pipe-node__sub">AI discovery call</span>
+      </div>
+
+      <div class="pipe-arrow"><div class="pipe-arrow__line"><div class="pipe-arrow__pulse" style="animation-delay:0.4s"></div></div></div>
+
+      <!-- Step 3: Webhook -->
+      <div class="pipe-node pipe-node--webhook">
+        <div class="pipe-node__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <span class="pipe-node__label">Webhook</span>
+        <span class="pipe-node__sub">End-of-call trigger</span>
+      </div>
+
+      <div class="pipe-arrow"><div class="pipe-arrow__line"><div class="pipe-arrow__pulse" style="animation-delay:0.8s"></div></div></div>
+
+      <!-- Step 4: Make.com -->
+      <div class="pipe-node pipe-node--make">
+        <div class="pipe-node__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <span class="pipe-node__label">Make.com</span>
+        <span class="pipe-node__sub">Orchestrator</span>
+      </div>
+
+      <!-- Branch out to 4 destinations -->
+      <div class="pipe-branch">
+        <div class="pipe-branch__stem"></div>
+        <div class="pipe-branch__rail"></div>
+        <div class="pipe-destinations">
+
+          <div class="pipe-dest pipe-dest--hubspot">
+            <div class="pipe-dest__drop"></div>
+            <div class="pipe-dest__node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.55 13 19.79 19.79 0 0 1 1.48 4.4 2 2 0 0 1 3.46 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.4a16 16 0 0 0 6.29 6.29l.8-.8a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>HubSpot CRM</span>
+            </div>
+          </div>
+
+          <div class="pipe-dest pipe-dest--calendar">
+            <div class="pipe-dest__drop"></div>
+            <div class="pipe-dest__node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Google Calendar</span>
+            </div>
+          </div>
+
+          <div class="pipe-dest pipe-dest--twilio">
+            <div class="pipe-dest__drop"></div>
+            <div class="pipe-dest__node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Twilio SMS</span>
+            </div>
+          </div>
+
+          <div class="pipe-dest pipe-dest--gmail">
+            <div class="pipe-dest__drop"></div>
+            <div class="pipe-dest__node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Gmail</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 </section>
 
